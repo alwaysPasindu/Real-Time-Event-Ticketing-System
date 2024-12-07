@@ -12,16 +12,28 @@ public class Configuration {
         this.customerRetrievalRate = customerRetrievalRate;
     }
 
-    // Getters
+    // Getters and Setters
     public int getMaxTicketCapacity() {
         return maxTicketCapacity;
+    }
+
+    public void setMaxTicketCapacity(int maxTicketCapacity) {
+        this.maxTicketCapacity = maxTicketCapacity;
     }
 
     public int getVendorReleaseRate() {
         return vendorReleaseRate;
     }
 
+    public void setVendorReleaseRate(int vendorReleaseRate) {
+        this.vendorReleaseRate = vendorReleaseRate;
+    }
+
     public int getCustomerRetrievalRate() {
         return customerRetrievalRate;
+    }
+
+    public void setCustomerRetrievalRate(int customerRetrievalRate) {
+        this.customerRetrievalRate = customerRetrievalRate;
     }
 }
