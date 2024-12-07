@@ -16,7 +16,7 @@ public class Vendor implements Runnable {
         try {
             while (true) {
                 for (int i = 0; i < ticketsPerRelease; i++) {
-                    Ticket ticket = new Ticket("Ticket-" + System.currentTimeMillis()); // Unique ticket ID
+                    Ticket ticket = new Ticket(); // Use no-argument constructor
                     ticketPool.addTicket(ticket); // Add to pool
                 }
                 Thread.sleep(releaseInterval); // Release tickets every interval

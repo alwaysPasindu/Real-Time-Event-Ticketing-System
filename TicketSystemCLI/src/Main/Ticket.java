@@ -1,11 +1,14 @@
 package Main;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Ticket {
-    private String ticketId;
+    private static final AtomicLong counter = new AtomicLong();
+    private final String ticketId;
 
     // Constructor to create a ticket with a unique ID
-    public Ticket(String ticketId) {
-        this.ticketId = ticketId;
+    public Ticket() {
+        this.ticketId = "Ticket-" + counter.incrementAndGet();
     }
 
     // Getter for ticketId
