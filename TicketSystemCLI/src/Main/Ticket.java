@@ -1,22 +1,22 @@
-package Main;
-
-import java.util.concurrent.atomic.AtomicLong;
-
 public class Ticket {
-    private static final AtomicLong counter = new AtomicLong();
-    private final String ticketId;
+    private String ticketId;
 
-    // Constructor
-    public Ticket() {
-        this.ticketId = "Ticket-" + counter.incrementAndGet();
+    public Ticket(String ticketId) {
+        this.ticketId = ticketId;
     }
 
     public String getTicketId() {
         return ticketId;
     }
 
+    public void setTicketId(String ticketId) {
+        this.ticketId = ticketId;
+    }
+
     @Override
     public String toString() {
-        return "Ticket ID: " + ticketId;
+        return "Ticket{" +
+                "ticketId='" + ticketId + '\'' +
+                '}';
     }
 }
