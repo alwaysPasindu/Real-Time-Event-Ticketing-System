@@ -5,39 +5,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ticketing</groupId>
-    <artifactId>real-time-ticketing-system</artifactId>
+    <artifactId>EventTicketingSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Real-Time Event Ticketing System</name>
-    <description>A real-time event ticketing system using Java with threads, synchronization, and JSON configuration.</description>
-
     <dependencies>
-        <!-- Gson for JSON parsing and serialization -->
+        <!-- Gson Dependency -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.8</version>
-        </dependency>
-
-        <!-- JUnit for testing (optional, but recommended for unit tests) -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.7.1</version>
-            <scope>test</scope>
+            <version>2.8.9</version>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Compiler plugin for Java 11 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

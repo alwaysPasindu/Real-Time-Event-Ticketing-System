@@ -15,7 +15,6 @@ public class Main {
         Config config = loadConfig();
 
         Scanner scanner = new Scanner(System.in);
-
         // Take user input for configuration (if not using loaded config)
         System.out.print("Enter total number of tickets: ");
         config.setTotalTickets(scanner.nextInt());
