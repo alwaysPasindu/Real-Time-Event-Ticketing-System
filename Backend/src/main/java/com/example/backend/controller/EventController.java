@@ -14,11 +14,13 @@ public class EventController {
     @Autowired
     private EventService eventService;
 
+    // Create a new event
     @PostMapping
     public Event createEvent(@RequestBody Event event) {
         return eventService.createEvent(event);
     }
 
+    // Get all events
     @GetMapping
     public List<Event> getAllEvents() {
         return eventService.getAllEvents();

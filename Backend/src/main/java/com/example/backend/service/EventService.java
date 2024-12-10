@@ -13,10 +13,12 @@ public class EventService {
     @Autowired
     private EventRepository eventRepository;
 
+    // Create event
     public Event createEvent(Event event) {
         return eventRepository.save(event);
     }
 
+    // Get all events
     public List<Event> getAllEvents() {
         return eventRepository.findAll();
     }
