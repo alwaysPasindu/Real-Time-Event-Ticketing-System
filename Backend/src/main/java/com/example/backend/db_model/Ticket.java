@@ -10,15 +10,16 @@ public class Ticket {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long userId;   // Reference to the user who purchased the ticket
-    private Long eventId;  // Reference to the event
-    private String ticketType;  // e.g., Regular, VIP
-    private boolean isBooked;
+    private Long id;  // Automatically generated ID for the ticket
+    private Long userId;   // Foreign key to the User table
+    private Long eventId;  // Foreign key to the Event table
+    private String ticketType;  // Ticket type (e.g., VIP, Regular)
+    private boolean isBooked;   // Whether the ticket is booked
 
-    // Constructors, getters, setters
+    // Default constructor
     public Ticket() {}
 
+    // Constructor with parameters
     public Ticket(Long userId, Long eventId, String ticketType, boolean isBooked) {
         this.userId = userId;
         this.eventId = eventId;
@@ -26,6 +27,7 @@ public class Ticket {
         this.isBooked = isBooked;
     }
 
+    // Getters and Setters
     public Long getId() {
         return id;
     }

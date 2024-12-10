@@ -1,5 +1,6 @@
 package com.example.backend.db_model;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,15 +12,16 @@ public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id;  // Automatically generated ID for the event
     private String name;
     private LocalDateTime eventDate;
     private String location;
     private int totalTickets;
 
-    // Constructors, getters, setters
+    // Default constructor
     public Event() {}
 
+    // Constructor with parameters
     public Event(String name, LocalDateTime eventDate, String location, int totalTickets) {
         this.name = name;
         this.eventDate = eventDate;
@@ -27,6 +29,7 @@ public class Event {
         this.totalTickets = totalTickets;
     }
 
+    // Getters and Setters
     public Long getId() {
         return id;
     }

@@ -1,5 +1,6 @@
 package com.example.backend.db_model;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,18 +11,20 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id;  // Automatically generated ID for the user
     private String username;
     private String email;
 
-    // Constructors, getters, setters
+    // Default constructor
     public User() {}
 
+    // Constructor with parameters
     public User(String username, String email) {
         this.username = username;
         this.email = email;
     }
 
+    // Getters and Setters
     public Long getId() {
         return id;
     }
