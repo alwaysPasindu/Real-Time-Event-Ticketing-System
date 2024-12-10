@@ -14,16 +14,14 @@ public class User {
     private String username;
     private String email;
 
-    // Default constructor
+    // Constructors, getters, setters
     public User() {}
 
-    // Constructor with parameters
     public User(String username, String email) {
         this.username = username;
         this.email = email;
     }
 
-    // Getters and setters
     public Long getId() {
         return id;
     }
