@@ -1,0 +1,33 @@
+// src/components/TicketPurchase.js
+import React, { useState } from 'react';
+import { purchaseTicket } from '../services/api';
+
+const TicketPurchase = ({ ticketId }) => {
+    const [quantity, setQuantity] = useState(1);
+    const [message, setMessage] = useState('');
+
+    const handlePurchase = async () => {
+        try {
+            const result = await purchaseTicket(ticketId, quantity);
+            setMessage(result.message);
+        } catch (error) {
+            setMessage(error.response.data.error || 'Error purchasing ticket');
+        }
+    };
+
+    return (
+        <div>
+            <h3>Purchase Ticket</h3>
+            <input 
+                type="number" 
+                value={quantity} 
+                onChange={(e) => setQuantity(e.target.value)} 
+                min="1" 
+            />
+            <button onClick={handlePurchase}>Buy Now</button>
+            {message && <p>{message}</p>}
+        </div>
+    );
+};
+
+export default TicketPurchase;
